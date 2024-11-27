@@ -18,7 +18,7 @@ CREATE TABLE petPet
     birth   DATE,
     death   DATE,
     CONSTRAINT chk_gender CHECK ( gender IN ('M', 'F') )
-);
+    );
 
 CREATE TABLE petEvent
 (
@@ -27,4 +27,5 @@ CREATE TABLE petEvent
     eventdate DATE,
     eventtype VARCHAR(15),
     remark    VARCHAR(15),
-    FOREIGN KEY (petname) REFERENCES petPet (petname));
+    FOREIGN KEY (petname) REFERENCES petPet (petname)
+    );
